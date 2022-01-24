@@ -109,7 +109,7 @@ a .btn{
 }
 
 section{
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 
@@ -117,17 +117,20 @@ section{
     background: rgba(128, 128, 128, 0.397);
     width: 90%;
     padding: 3rem;
+    margin-bottom: 3rem;
 }
 
 .discription{
     background: darkcyan;
-    padding: 2rem;
-    width: 50%;
+    padding: 3rem;
+    width: 89%;
+    border-left: 9px orange solid;
+    border-radius: 5px 0px 0px 0px;
 }
 
 input[type='discription']{
-    width: 300px;
-    padding: 10px;
+    width: 450px;
+    padding: 15px;
     border:1px solid;
     outline: none;
 }
@@ -140,6 +143,15 @@ input[type= 'question']{
     outline: none;
 }
 
+input[type= 'poin']{
+    outline: none;
+    width: 5%;
+    padding: 5px;
+    height: 3vh;
+    text-align: center;
+    margin-left: 90%;
+}
+
 input[type='text'] {
     padding: 10px;
     width: 300px;
@@ -150,10 +162,17 @@ input[type='text'] {
     margin: 1rem;
 }
 
+.button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
 .add {
-  background-color: #fff000;
-  border-radius: 12px;
-  color: #000;
+  background-color: rgba(0, 119, 255, 0.801);
+  border-radius: 7px;
+  color: #ffff;
   cursor: pointer;
   font-weight: bold;
   padding: 10px 15px;
@@ -162,18 +181,89 @@ input[type='text'] {
   box-sizing: border-box;
   border: 0;
   font-size: 16px;
-  margin-top: 2rem;
-  margin-left: 35rem;
+  margin-left: 30rem;
+  margin-top: 1rem;
 }
 
 .add:hover{
     padding-left: .5rem;
-    background-color: #000000c7;
-    color: #ffff;
+    background-color:rgb(30, 110, 202);
+    color: #000;
     transition: 400ms;
 }
 
+.delete {
+    background-color: rgba(255, 0, 0, 0.801);
+    border-radius: 7px;
+    color: #ffff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    width: 20%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+}
+
+.delete:hover{
+    background:rgb(160, 24, 24);
+}
+
+.edit{
+  border-radius: 7px;
+  color: #ffff;
+  background:darkcyan;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  width: 20%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  margin-left: 2rem;
+}
+
+.edit:hover{
+    background: rgb(4, 98, 98);
+}
 
 .box-content .answer{
     margin-left: 5rem;
+}
+
+/* -------------------- display question-------------- */
+.quiz-done{
+    margin-top: 10rem;
+    background-color:rgba(128, 128, 128, 0.397) ;
+    width: 56%;
+    padding: 2rem;
+    border-top: 5px orange solid;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: 20%;
+    margin-bottom: 3rem;
+}
+
+.content-intruction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+hr{
+    height: .5vh;
+    background:rgb(110, 110, 110);
+}
+
+.content-answer{
+    line-height: 2;
+}
+
+.question{
+    font-size: 1.3rem;
+}
+
+.intruction{
+    font-size: 1.5rem;
 }
