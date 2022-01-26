@@ -14,62 +14,82 @@ function storeData(){
     let answer4 = document.getElementById('answer4').value;
     // store data //
     let object = {Question: question, Choice: [answer1, answer2, answer3, answer4], Answer: answer1};
-    data.push(object);  
-    displayQuestions()
+    data.push(object); 
 };
 
-// function displayQuestions------------
-function displayQuestions(){
-    for (let val of data){
-        let p = document.createElement("p");
-        p.className = "question";
-        p.textContent = val.question;
-        form.appendChild(p);
-        
-        let containAnswer = document.createElement("div")
-        containAnswer.className = "containAnswer";
-
-        // answer 1
-        let input1 = document.createElement("input");
-        input1.type = "radio";
-        input1.name = "answer1";
-        input1.id = "answer1";
-        input1.textContent = val.Choice[0];
-        containAnswer.appendChild(input1);
-
-        // answer2 
-        let input2 = document.createElement("input");
-        input2.type = "radio";
-        input2.name = "answer2";
-        input2.id = "answer2";
-        input2.textContent = val.Choice[1];
-        containAnswer.appendChild(input2);
-
-        // answer3
-        let input3 = document.createElement("input");
-        input3.type = "radio";
-        input3.name = "answer3";
-        input3.id = "answer3";
-        input3.textContent = val.Choice[2];
-        containAnswer.appendChild(input3);
-        
-        // answer4 
-        let input4 = document.createElement("input");
-        input4.type = "radio";
-        input4.name = "answer4";
-        input4.id = "answer4";
-        input4.textContent = val.Choice[0];
-        containAnswer.appendChild(input4)
-
-        containQuestion.appendChild(formContain);
-        feature.appendChild(containQuestion);
+/* ====== display quiz start ======== */
+/*   function store data of player   */
+function dataPlayer(){
+    // right aswers nb1 //
+    let answerNb1 = document.getElementById('answerNb1');
+    // right aswers nb2 //
+    let answerNb2 = document.getElementById('answerNb2');
+    // right aswers nb3//
+    let answerNb3 = document.getElementById('answerNb3');
+    // right aswers nb4 //
+    let answerNb4 = document.getElementById('answerNb4');
+    // right aswers nb5 //
+    let answerNb5 = document.getElementById('answerNb5');
+    // right aswers nb6 //
+    let answerNb6 = document.getElementById('answerNb6');
+    // score //
+    let score = document.getElementById('score'),
+    
+    result = 0;
+    if(answerNb1.checked){
+        result += 10;
     }
-}
+    if(answerNb2.checked){
+        result += 10;
+    }
+    if(answerNb3.checked){
+        result += 10;
+    }
+    if(answerNb4.checked){
+        result += 10;
+    }
+    if(answerNb5.checked){
+        result += 10;
+    }
+    if(answerNb6.checked){
+        result += 10;
+    }
+    if(answerNb7.checked){
+        result += 10;
+    }
+    if(answerNb8.checked){
+        result += 10;
+    }
+    if(answerNb9.checked){
+        result += 10;
+    }
+    if(answerNb10.checked){
+        result += 10;
+    }
+
+    console.log(result);
+    console.log(result);
+
+    
+    score.textContent = result;
+
+    
+    let rightObject = [answerNb1, answerNb2, answerNb3, answerNb4, answerNb5, answerNb6];
+    rightAnswer.push(rightObject);
+    
+};
+
+/* ====== display quiz end ======== */
 
 // gobal variable // 
 let data =[
     
 ];
 
-let addButton = document.getElementById("add");
-addButton.addEventListener("click", storeData);
+let rightAnswer =[
+
+];
+
+
+let applyAnswer = document.getElementById("submit");
+applyAnswer.addEventListener("click", dataPlayer);
