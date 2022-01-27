@@ -1,12 +1,16 @@
 // -----------------------------------------------//
 /* To store information from user */
 // -----------------------------------------------//
+// contain Menu______________________________________________
 
  
 // function display Question ==================================
 
 function displayQuestion(){
-    
+    let Questiondelet = document.querySelectorAll("#containQuestion");
+    for(let questions of Questiondelet){
+        questions.parentNode.removeChild(questions);
+    }
     let container2=document.createElement("div");
     container2.className = "container2"
     let containQuestion = document.createElement('div');
@@ -106,51 +110,79 @@ function displayQuestion(){
 
         containQuestion.appendChild(formContain); 
 
-        //console.log(containQuestion) ;
-        container2.appendChild(containQuestion);
-        console.log(container2)
-        document.body.appendChild(container2)
+        // create btn for edit and btn delete and parent of btn edit and delete___________________________________
+        let btndelete = document.createElement("button")  
+        btndelete.className = "remove";
+        btndelete.textContent = "Remove";
+        // appened parent of btnedit and btndelete to form________________________________________
         
+        formContain.appendChild(btndelete);
+
+        container2.appendChild(containQuestion);
+        document.body.appendChild(container2);
+        
+        //console.log(btndelete.parentElement.firstChild);
     }
-    
     //console.log(Questiondelet);
-    let Questiondelet = document.querySelectorAll("#containQuestion");
-    if (Questiondelet.length>1){
-        Questiondelet[0].remove();
-    }
-   
+    
 }
-
-
 function storeData(){
-    // get question //
+    // get question //________________________________________
     let question = document.getElementById('question').value;
+
     // get answer1 //
     let answer1 = document.getElementById('answer1').value;
+
     // get answer2 //
     let answer2 = document.getElementById('answer2').value;
+
     // get answer3 //
     let answer3 = document.getElementById('answer3').value;
+
     // get answer3 //
     let answer4 = document.getElementById('answer4').value;
+
     // store data //
-    // let object = {Question: question, Choice: [answer1, answer2, answer3, answer4], Answer: answer1};
-    let object = {}
-    let arrayChoich=[]
-    arrayChoich.push(answer1);
-    arrayChoich.push(answer2);
-    arrayChoich.push(answer3);
-    arrayChoich.push(answer4);
-    object.Question = question;
-    object.Choice=arrayChoich;
-    data.push(object);  
-    displayQuestion();
+    // it doesn't display if we don't input data___________________________________________
+
+    if (question.length > 0 && answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0){
+        let object = {}
+        let arrayChoich=[]
+        arrayChoich.push(answer1);
+        arrayChoich.push(answer2);
+        arrayChoich.push(answer3);
+        arrayChoich.push(answer4);
+        object.Question = question;
+        object.Choice=arrayChoich;
+        data.push(object);  
+        displayQuestion();
+    };
 };
 
-// gobal variable // 
+// function for removedata________________________________________________
+function removedata(event){
+    if (event.target.className ==="remove"){
+        let remove = event.target.parentElement.firstChild.textContent;
+        for (let val in data){
+            if (data[val].Question === remove){
+                data.splice(val,1);
+                console.log(data);
+            }
+            displayQuestion();
+        }
+    }
+
+}
+// funtion for check the answer__________________________________________
+
+// gobal variable // _________________________________________________________
 let data =[
-    {Question : 'How are you ?' , Choice:['good','thanks','bad','not bad']},
+    {Question : '1, How are you ?' , Choice:['a. good','b. thanks','c. bad','d. not bad']},
 ];
+
+//console.log(data);
 displayQuestion();
 let addButton = document.getElementById("add");
 addButton.addEventListener("click", storeData);
+
+document.addEventListener("click", removedata);
