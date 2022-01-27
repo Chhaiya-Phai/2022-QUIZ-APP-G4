@@ -4,32 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link font-awesome here  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link icon here -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- link css style here -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
     <title>Quiz App</title>
-
 </head>
 <body>
-    <!-- create-container -->
-    <div class="container">
+<!-- Menu section start -->
+<div class="content">
+    <div class="nav-bar">
         <h1>Quiz<span> App</span></h1>
+    </div>
+</div>   
+<!-- Menu section end -->
 
-        <!-- create-card- contents -->
-        <div class="card-content">
-            <div class="card">
-                <h2>go to play quiz</h2>
-                <img class="card1" src="img/card1.png" alt="">
-                <a href="page/display.html"><h3>start quiz</h3></a>
+<!-- feature section start -->
+
+    <div class="feature"> 
+        <div class="box-content">
+            <form action="">
+                <div class="text-answer">
+                   Question: <input type="question" id="question" placeholder="write question....." /><br /> 
+                   answer: 
+               </div>
+                <div class="answer">
+                    <input type="radio" name="answer">
+                    <label for="answer1"><input id="answer1" type="text" placeholder="......................................................................."></label><br>
+                    <input type="radio" name="answer">
+                    <label for="answer2"><input id="answer2" type="text" placeholder="......................................................................."></label><br>
+                    <input type="radio" name="answer">
+                    <label for="answer3"><input id="answer3" type="text" placeholder="......................................................................."></label><br>
+                    <input type="radio" name="answer">
+                    <label for="answer4"><input id="answer4" type="text" placeholder="........................................................................"></label><br>
+                </div>
+            </form>
+            <div class="btn">
+                <button class="backBtn"><a href="../index.html">Back</a></button>
+                <button class="add" id="add">Add +</button>
             </div>
 
-            <div class="card">
-                <h2>go to create quiz</h2>
-                <img class="card2" src="img/card2.png"alt="" >
-                <a href="pages/create.html"><h3>create quiz</h3></a>
-            </div>
         </div>
     </div>
+<!-- feature section end -->
+
+<!-- link Js -->
+<script src="js/script.js "></script>
 </body>
-    <!-- link js  -->
-    <script src="js/app.js"></script>
 </html>

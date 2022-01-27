@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+
+/* style of add Question=========================================/ */
+body{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    background: rgba(64, 224, 208, 0.247);
+}
+
+:root{
+    --btn:orange;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(206, 95, 61, 0.787); 
+}
+
+.nav-bar h1{
+    color: black;
+    padding: 1rem;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 2rem;
+    margin-top: 0;
+    
+}
+
+.nav-bar span{
+    color:var(--btn);
+}
+
+section{
+    width: 60%;
+    margin: auto;
+}
+.answer{
+    margin-left: 15%;
+}
+
+.box-content{
+    border-top: 7px solid #00b4d8;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(255, 255, 255, 0.767);
+}
+.text-answer{
+    font-size: 20px;
+    color: var(--light-color);
+   
+}
+input[type= 'question']{
+    font-size: 16px;
+    width: 400px;
+    margin: 10px;
+    padding: 20px;
+    margin-left: 3rem;
+    border:none;
+    outline: none;
+    box-shadow: rgba(15, 112, 185, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+
+.answer input[type='text'] {
+    font-size: 16px;
+    padding: 15px;
+    width: 350px;
+    border:1px solid;
+    border-radius: .5rem;
+    outline: none;
+    margin-left: 5rem;
+    margin: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border: none;
+
+}
+
+.btn{
+
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  margin-top: 40px;
+  border: none;  
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.backBtn {
+    background-color: #00b4d8;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 15%;
+    font-size: 18px;
+    border-radius: 5px;
+    
+}
+#add {
+    background: #00b4d8;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 15%;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+#add:hover{
+    padding-left: .5rem;
+    background-color:rgb(30, 196, 202);
+    color: #000;
+    transition: 400ms;
+}
+
+
+/* style for display Question======================================== */
+
+.container2{
+   width: 100%;
+}
+#containQuestion{
+    width: 55%;
+    margin: auto;
+    margin-left:21%;
+}
+.form{
+    width: 100%;
+    border-top: 8px solid #00b4d8;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(255, 255, 255, 0.767);
+    margin-top: 15px;
+    height: 40vh;
+}
+ol{
+    list-style: none;
+    display: flex;
+    margin: 10px;
+}
+li{
+    color: rgba(0, 0, 0, 0.733);
+    margin: 5px;
+}
+.form p{
+    color: rgba(0, 0, 0, 0.733);
+}
+.contentAnswer ol input{
+    margin: 5px;
+   
+}
+
