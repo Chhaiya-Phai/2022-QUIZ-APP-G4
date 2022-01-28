@@ -73,7 +73,6 @@ function displayQuestion(){
         let br2 = document.createElement("br");
         contentAnswer.appendChild(br2);
        
-    
         //answer3 //
         let ol3 = document.createElement("ol");
         let li3 = document.createElement("li");
@@ -84,13 +83,12 @@ function displayQuestion(){
         input3.name = "answer";
         input3.checked
         input3.id = "answer3";
-       ol3.appendChild(input3);
-       ol3.appendChild(li3);
+        ol3.appendChild(input3);
+        ol3.appendChild(li3);
         contentAnswer.appendChild(ol3);
         let br3 = document.createElement("br");
         contentAnswer.appendChild(br3);
-        
-
+    
         // answer4 //
         let ol4 = document.createElement("ol");
         let li4 = document.createElement("li");
@@ -107,58 +105,41 @@ function displayQuestion(){
         formContain.appendChild(contentAnswer);
 
         // get element that display on browser and appened child===========================
-
         containQuestion.appendChild(formContain); 
 
         // create btn for edit and btn delete and parent of btn edit and delete___________________________________
         let btndelete = document.createElement("button")  
         btndelete.className = "remove";
         btndelete.textContent = "Remove";
-        // appened parent of btnedit and btndelete to form________________________________________
-        
+
         formContain.appendChild(btndelete);
 
         container2.appendChild(containQuestion);
         document.body.appendChild(container2);
-        
-        //console.log(btndelete.parentElement.firstChild);
+         
     }
-    //console.log(Questiondelet);
-    
 }
-function storeData(){
-    // get question //________________________________________
-    let question = document.getElementById('question').value;
 
+/* function to add question */
+function addQuestion(){
+    // get question //
+    let question = document.getElementById('question').value;
     // get answer1 //
     let answer1 = document.getElementById('answer1').value;
-
     // get answer2 //
     let answer2 = document.getElementById('answer2').value;
-
     // get answer3 //
     let answer3 = document.getElementById('answer3').value;
-
     // get answer3 //
     let answer4 = document.getElementById('answer4').value;
-
+    // get correction //
+    let correct = document.getElementById('correct').value;
     // store data //
-    // it doesn't display if we don't input data___________________________________________
-
-    if (question.length > 0 && answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0){
-        let object = {}
-        let arrayChoich=[]
-        arrayChoich.push(answer1);
-        arrayChoich.push(answer2);
-        arrayChoich.push(answer3);
-        arrayChoich.push(answer4);
-        object.Question = question;
-        object.Choice=arrayChoich;
-        data.push(object);  
-        displayQuestion();
-    };
+    let object = {question:question, choice:[answer1, answer2, answer3, answer4], answer:correct};
+    data.push(object);
+    console.log(data);
 };
-
+ 
 // function for removedata________________________________________________
 function removedata(event){
     if (event.target.className ==="remove"){
@@ -171,18 +152,14 @@ function removedata(event){
             displayQuestion();
         }
     }
-
-}
-// funtion for check the answer__________________________________________
+};
 
 // gobal variable // _________________________________________________________
-let data =[
-    {Question : '1, How are you ?' , Choice:['a. good','b. thanks','c. bad','d. not bad']},
-];
+let data =[];
 
 //console.log(data);
 displayQuestion();
 let addButton = document.getElementById("add");
-addButton.addEventListener("click", storeData);
-
+addButton.addEventListener("click", addQuestion);
 document.addEventListener("click", removedata);
+
