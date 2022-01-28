@@ -113,7 +113,7 @@ function displayQuestion(){
         // create btn for edit and btn delete and parent of btn edit and delete___________________________________
         let btndelete = document.createElement("button")  
         btndelete.className = "remove";
-        btndelete.textContent = "Remove";
+        btndelete.textContent = "REMOVE";
         // appened parent of btnedit and btndelete to form________________________________________
         
         formContain.appendChild(btndelete);
@@ -147,7 +147,7 @@ function storeData(){
 
     if (question.length > 0 && answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0){
         let object = {}
-        let arrayChoich=[]
+        let arrayChoich=[];
         arrayChoich.push(answer1);
         arrayChoich.push(answer2);
         arrayChoich.push(answer3);
@@ -156,7 +156,14 @@ function storeData(){
         object.Choice=arrayChoich;
         data.push(object);  
         displayQuestion();
-    };
+    } else{
+        let text = document.createElement("p");
+        text.textContent = "*Can not display";
+        text.textContentdiv.style.color = "red";
+
+
+    }
+    
 };
 
 // function for removedata________________________________________________
