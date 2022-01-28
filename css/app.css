@@ -144,7 +144,7 @@ input[type= 'question']{
     border-radius: 15px;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.767);
-    margin-top: 15px;
+    margin-top: 1rem;
     height: 40vh;
     
 }
@@ -182,4 +182,49 @@ li{
 #active{
     background-color: slategray;
 }
+
+/* -------------------- display quiz-------------- */
+.container-quiz{
+    width: 70%;
+    padding: 5rem;
+    background: rgb(236, 229, 229);
+    margin: auto;
+    line-height: 1.8;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    border-top: 7px orange solid;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.container-quiz .image-quiz{
+    text-align: center;
+}
+
+.container-quiz .image-quiz img{
+    width: 30%;
+}
+
+.display-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+}
+
+#submit:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+} 
 
