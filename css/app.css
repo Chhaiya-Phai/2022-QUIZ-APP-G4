@@ -14,6 +14,7 @@ body{
     --light-color:#666;
     --box-shadow:0 .5rem 1.5rem rgba(206, 95, 61, 0.787); 
 }
+
 .nav-bar{
     width: 100%;
     display: flex;
@@ -28,20 +29,21 @@ body{
     font-size: 18px;
     margin-top: 40px;
 }
-
 .nav-bar h1{
     color: black;
     padding: 1rem;
     font-family: 'Zen Tokyo Zoo', cursive;
     font-size: 2rem;
     margin-top: 0;
-    
+   
 }
-
 .nav-bar span{
     color:var(--btn);
 }
-
+.active{
+    border-bottom: 3px solid #CDCF1F;
+    color:#B44D0F;
+}
 .box-content{
     border-top: 7px solid #00b4d8;
     border-radius: 15px;
@@ -50,61 +52,37 @@ body{
     margin-top: 15px;
     padding: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgba(255, 255, 255, 0.767);
-    
+    background-color: rgba(255, 255, 255, 0.767);    
 }
 .text-answer{
     font-size: 20px;
     color: var(--light-color);
-    margin-left: 11%;
-   
+    margin-left: 11%; 
 }
 input[type= 'question']{
     font-size: 16px;
     width: 400px;
     margin: 10px;
     padding: 20px;
-    margin-left: 2rem;
+    margin-left: 10%;
     border:none;
     outline: none;
     box-shadow: rgba(15, 112, 185, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-
-.answer input[type='text'] {
+.choice{
+    margin-left: 20%;
+}
+.choice input[type='text'] {
     font-size: 16px;
     padding: 15px;
     width: 350px;
     border:1px solid;
     border-radius: .5rem;
     outline: none;
-    margin-left: 5rem;
     margin: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border: none;
 
-}
-
-.btn{
-
-  width: 100%;
-  display: flex;
-  justify-content:space-between;
-  margin-top: 40px;
-  border: none;  
-}
-.btn a{
-    text-decoration: none;
-    color: white;
-}
-.backBtn {
-    background-color: #00b4d8;
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    width: 15%;
-    font-size: 18px;
-    border-radius: 5px;
-    
 }
 #add {
     background: #00b4d8;
@@ -115,16 +93,14 @@ input[type= 'question']{
     margin: 10px;
     font-size: 18px;
     border-radius: 5px;
+    margin-left: 80%;
 }
-
-
 #add:hover{
     background-color:rgb(30, 196, 202);
     transition: 400ms;
 }
 
-
-/* style for display Question======================================== */
+/* ======================================== display Question======================================== */
 
 .container2{
    width: 100%;
@@ -141,23 +117,21 @@ input[type= 'question']{
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.767);
     margin-top: 1rem;
-    height: 40vh;
+    height: 49vh;
     
 }
-
 ol{
     list-style: none;
     display: flex;
     margin: 1px;
 }
-li{
+ol li{
     color: rgba(0, 0, 0, 0.733);
-    margin: 5px;
+    margin: 10px;
 }
 .form p{
     color: rgba(0, 0, 0, 0.733);
 }
-
 .remove{
     border: none;
     padding: 10px;
@@ -175,8 +149,8 @@ li{
     background-color: skyblue;
     color: slategray;
 }
-#active{
-    background-color: slategray;
+.answer{
+    margin-left: 2%;
 }
 
 /* -------------------- display quiz-------------- */
@@ -191,20 +165,16 @@ li{
     border-top: 7px orange solid;
     border-radius: 5px 5px 0px 0px;
 }
-
 .container-quiz .image-quiz{
     text-align: center;
 }
-
 .container-quiz .image-quiz img{
     width: 30%;
 }
-
 .display-button{
     display: flex;
     justify-content: space-between;
 }
-
 #submit {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;

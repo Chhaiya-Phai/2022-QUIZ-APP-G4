@@ -45,21 +45,24 @@ function displayQuestion() {
 
         // TODO loop on answers
         for(let val in question.answers){
-            let iofAnswer=document.createElement('i');
+            let ol = document.createElement("ol");
+            let input = document.createElement("input");
+            let iofAnswer=document.createElement('li');
+            input.type = "radio";
+            input.name = "choice"
             let brofAnswer=document.createElement('br');
             iofAnswer.className='answer';
             iofAnswer.textContent=question.answers[val];
-            contentAnswer.appendChild(iofAnswer);
+            ol.appendChild(input);
+            ol.appendChild(iofAnswer);
+            contentAnswer.appendChild(ol);
             contentAnswer.appendChild(brofAnswer);
-            console.log(iofAnswer);
         };
         formContain.appendChild(contentAnswer);
         // DeElete button
         let btndelete = document.createElement("button")
         btndelete.className = "remove";
         btndelete.textContent = "REMOVE";
-
-
         formContain.appendChild(btndelete);
     }
 }
@@ -73,7 +76,6 @@ function addQuestion() {
     let answer2 = document.getElementById('answer2').value;
     let answer3 = document.getElementById('answer3').value;
     let answer4 = document.getElementById('answer4').value;
-    let correct = document.getElementById('correct').value;
 
     let isValid = answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0
     if (isValid) {
@@ -90,12 +92,11 @@ function addQuestion() {
 
         // 3- Refresh the DOM
         displayQuestion();
-        console.log("hello");
 
     } else {
         // itnot valid display error
         // TODO
-        alert("You need to complet all the fill!")
+        
     }
 };
 

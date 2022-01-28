@@ -20,7 +20,7 @@
         <div class="nav-bar">
             <h1>Quiz<span> App</span></h1>
             <div class="Menu">
-                <a href="#">Create Quiz</a>
+                <a href="#" class="active">Create Quiz</a>
                 <a href="run-quiz.html">Play Quiz</a>
             </div>
         </div>
@@ -35,17 +35,21 @@
                 <div class="text-answer">
                     <input type="question" id="question" placeholder="Question" /><br />
                 </div>
-                <div class="answer">
+                <div class="choice">
                     <label for="answer1"><input id="answer1" type="text" placeholder="option 1"></label><br>
                     <label for="answer2"><input id="answer2" type="text" placeholder="option 2"></label><br>
                     <label for="answer3"><input id="answer3" type="text" placeholder="option 3"></label><br>
                     <label for="answer4"><input id="answer4" type="text" placeholder="option 4"></label><br>
                 </div>
                 <hr>
-                Your correct answer: <input type="text" id="correct">
+                <div class="storCorectAnswer">
+                    <!-- Your correct answer: <input type="" id="correct"> -->
+                    <select name="" id="">
+                        
+                    </select>
+                </div>
             </form>
             <div class="btn">
-                <button class="backBtn"><a href="run-quiz.html">Back</a></button>
                 <button id="add">Add +</button>
             </div>
         </div>
