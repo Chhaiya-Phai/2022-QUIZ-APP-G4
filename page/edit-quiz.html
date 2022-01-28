@@ -10,7 +10,7 @@
     <!-- link icon here -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- link css style here -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <title>Quiz App</title>
 </head>
 
@@ -20,8 +20,8 @@
         <div class="nav-bar">
             <h1>Quiz<span> App</span></h1>
             <div class="Menu">
-                <a href="active">Display Quiz</a>
-                <a href="actuve">Create Quiz</a>
+                <a href="#">Create Quiz</a>
+                <a href="run-quiz.html">Play Quiz</a>
             </div>
         </div>
     </div>
@@ -36,24 +36,22 @@
                     <input type="question" id="question" placeholder="Question" /><br />
                 </div>
                 <div class="answer">
-                    <label for="answer1"><input id="answer1" type="text" placeholder="Answer"></label><br>
-                    <label for="answer2"><input id="answer2" type="text" placeholder="Answer"></label><br>
-                    <label for="answer3"><input id="answer3" type="text" placeholder="Answer"></label><br>
-                    <label for="answer4"><input id="answer4" type="text" placeholder="Answer"></label><br>
+                    <label for="answer1"><input id="answer1" type="text" placeholder="option 1"></label><br>
+                    <label for="answer2"><input id="answer2" type="text" placeholder="option 2"></label><br>
+                    <label for="answer3"><input id="answer3" type="text" placeholder="option 3"></label><br>
+                    <label for="answer4"><input id="answer4" type="text" placeholder="option 4"></label><br>
                 </div>
                 <hr>
                 Your correct answer: <input type="text" id="correct">
             </form>
             <div class="btn">
-                <button class="backBtn"><a href="../index.html">Back</a></button>
+                <button class="backBtn"><a href="run-quiz.html">Back</a></button>
                 <button id="add">Add +</button>
             </div>
         </div>
     </div>
     <!-- feature section end -->
-
-    <!-- link Js -->
-    <script src="js/edit-quiz.js "></script>
 </body>
-
+<!-- link Js -->
+<script src="../js/edit-quiz.js"></script>
 </html>

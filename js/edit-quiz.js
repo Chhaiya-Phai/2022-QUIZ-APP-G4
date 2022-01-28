@@ -44,8 +44,16 @@ function displayQuestion() {
         contentAnswer.className = "contentAnswer";
 
         // TODO loop on answers
-
-
+        for(let val in question.answers){
+            let iofAnswer=document.createElement('i');
+            let brofAnswer=document.createElement('br');
+            iofAnswer.className='answer';
+            iofAnswer.textContent=question.answers[val];
+            contentAnswer.appendChild(iofAnswer);
+            contentAnswer.appendChild(brofAnswer);
+            console.log(iofAnswer);
+        };
+        formContain.appendChild(contentAnswer);
         // DeElete button
         let btndelete = document.createElement("button")
         btndelete.className = "remove";
@@ -67,14 +75,13 @@ function addQuestion() {
     let answer4 = document.getElementById('answer4').value;
     let correct = document.getElementById('correct').value;
 
-    let isValid = question.length > 0 && answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0
+    let isValid = answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0
     if (isValid) {
 
         // 1- Create a new question
         let newQuestion = {}
 
-        let answers = [];
-        newQuestion.answers = [answer1, answer2, answer3, answer4]
+        newQuestion.answers = [answer1, answer2, answer3, answer4];
         newQuestion.title = title;
         newQuestion.correctAnswer = 0;      // TODO temporary
 
@@ -83,10 +90,12 @@ function addQuestion() {
 
         // 3- Refresh the DOM
         displayQuestion();
+        console.log("hello");
 
     } else {
         // itnot valid display error
         // TODO
+        alert("You need to complet all the fill!")
     }
 };
 
@@ -108,8 +117,6 @@ function removedata(event) {
 
 // 1- Display the list of quetions
 displayQuestion();
-
-
 
 let addButton = document.getElementById("add");
 addButton.addEventListener("click", addQuestion);

@@ -42,10 +42,6 @@ body{
     color:var(--btn);
 }
 
-.answer{
-    margin-left: 15%;
-}
-
 .box-content{
     border-top: 7px solid #00b4d8;
     border-radius: 15px;
