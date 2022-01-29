@@ -31,7 +31,7 @@
 
     <div class="feature">
         <div class="box-content">
-            <form action="">
+            <form action="" id="store-data">
                 <div class="text-answer">
                     <input type="question" id="question" placeholder="Question" /><br />
                 </div>
@@ -46,10 +46,10 @@
                     <!-- Your correct answer: <input type="" id="correct"> -->
                     Correct answer: 
                     <select name="option" id="selection">
-                        <option value="a">A</option>
-                        <option value="a">B</option>
-                        <option value="a">C</option>
-                        <option value="a">D</option>
+                        <option value="" id="option1">A</option>
+                        <option value="" id="option2">B</option>
+                        <option value="" id="option3">C</option>
+                        <option value="" id="option4">D</option>
                     </select>
                 </div>
             </form>
@@ -62,5 +62,5 @@
 </body>
 <!-- link Js -->
 <script src="../js/edit-quiz.js"></script>
-<script src="../sweetalert2.all.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

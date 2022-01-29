@@ -8,7 +8,13 @@
 //  answers		     array of string
 //  correctAnswer	integer
 //
-let listOfquestions = [];
+let listOfquestions = [
+    {
+        title:'what is your name ?',
+        answers:['lida','chaiya','sophy','oun'],
+        correctAnswer:'lida',
+}
+];
 
 
 //
@@ -53,11 +59,17 @@ function displayQuestion() {
             let brofAnswer=document.createElement('br');
             iofAnswer.className='answer';
             iofAnswer.textContent=question.answers[val];
+            
+            if (question.answers[val]===question.correctAnswer){
+                input.checked = true;
+                ol.style.background='greenyellow';
+            };
             ol.appendChild(input);
             ol.appendChild(iofAnswer);
             contentAnswer.appendChild(ol);
             contentAnswer.appendChild(brofAnswer);
         };
+        console.log(question);
         formContain.appendChild(contentAnswer);
         // DeElete button
         let btndelete = document.createElement("button")
@@ -76,6 +88,18 @@ function addQuestion() {
     let answer2 = document.getElementById('answer2').value;
     let answer3 = document.getElementById('answer3').value;
     let answer4 = document.getElementById('answer4').value;
+    
+
+    // get option from html__________________________________
+    let myoption1 = document.querySelector('#option1');
+    myoption1.value=answer1;
+    let myoption2 = document.querySelector('#option2');
+    myoption2.value=answer2;
+    let myoption3 = document.querySelector('#option3');
+    myoption3.value=answer3;
+    let myoption4 = document.querySelector('#option4');
+    myoption4.value=answer4;
+    let corected = document.querySelector('#selection').value;
 
     let isValid = answer1.length > 0 && answer2.length > 0 && answer3.length > 0 && answer4.length > 0
     if (isValid) {
@@ -85,7 +109,7 @@ function addQuestion() {
 
         newQuestion.answers = [answer1, answer2, answer3, answer4];
         newQuestion.title = title;
-        newQuestion.correctAnswer = 0;      // TODO temporary
+        newQuestion.correctAnswer = corected;      // TODO temporary
 
         // 2- Add the question
         listOfquestions.push(newQuestion);
@@ -97,7 +121,7 @@ function addQuestion() {
         // itnot valid display error
         // TODO
         Swal.fire({
-            title: 'Custom animation with Animate.css',
+            title: 'You need to complete all data.',
             showClass: {
               popup: 'animate__animated animate__fadeInDown'
             },
@@ -113,16 +137,20 @@ function addQuestion() {
 //
 //
 function removedata(event) {
+    // event.preventDefault();
     let titleOfQuestionToRemove = event.target.parentElement.firstChild.textContent;
+    console.log(titleOfQuestionToRemove);
     for (let index in listOfquestions) {
         if (listOfquestions[index].title === titleOfQuestionToRemove) {
-            listOfquestions.splice(val, 1);
+            listOfquestions.splice(index, 1);
         }
     }
     displayQuestion();
 };
 
+// _______________________________funtion for hide Form___________________________
 
+//view.addEventListener("click", hideForm);
 // --------------------------------------------
 
 // 1- Display the list of quetions
@@ -130,5 +158,4 @@ displayQuestion();
 
 let addButton = document.getElementById("add");
 addButton.addEventListener("click", addQuestion);
-
-
+document.addEventListener('click',removedata);
