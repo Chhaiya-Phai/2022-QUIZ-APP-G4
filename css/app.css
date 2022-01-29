@@ -116,7 +116,7 @@ input[type= 'question']{
     border-radius: 15px;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.767);
-    margin-top: 1rem;
+    margin-top:15px;
     height: 43vh;  
 }
 ol{
@@ -154,27 +154,59 @@ ol li{
 
 /* -------------------- display quiz-------------- */
 .container-quiz{
-    width: 60%;
+    width: 65%;
     margin: auto;
+    margin-top:15px;
+    padding: 20px;
+    border-top: 8px solid #00b4d8;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.767);
+    margin-top:15px;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.767);
+    height: 20vh;
 }
-.container-quiz .image-quiz{
-    text-align: center;
+.content-score{
+    width: 30%;
+    display: flex;
+    margin-left: 20%;
+    
 }
+.totalScore{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    width: 100%;   
+}
+
 .container-quiz .image-quiz img{
-    width: 20%;
-    margin-top: 0;
+    width: 15%;
+    margin-left: 40%;
+}
+.Question{
+    width: 100%;
+    border-top: 8px solid #00b4d8;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.767);
+    margin-top:15px;
+    
+}
+.Question input{
+    padding: 15px;
+    margin: 10px;
 }
 #submit {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: rgb(255, 0, 0);
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+ margin-top: 10px;
+ border: none;
+ background-color: royalblue;
+ color: white;
+ padding: 15px;
+ width: 10%;
+ font-size: 18px;
+ border-radius: 5px;
 }
 
 #submit:active {
@@ -183,3 +215,4 @@ ol li{
     left: 5px;
    
 } 
+
