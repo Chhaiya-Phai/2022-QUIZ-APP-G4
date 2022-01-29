@@ -34,7 +34,7 @@ function displayQuestion() {
         containQuestion.appendChild(formContain);
         formContain.className = "form";
 
-        // Create the tile
+        // Create the tile 
         let p = document.createElement("p");
         p.className = "question";
         p.textContent = question.title;
@@ -49,7 +49,7 @@ function displayQuestion() {
             let input = document.createElement("input");
             let iofAnswer=document.createElement('li');
             input.type = "radio";
-            input.name = "choice"
+            input.name = "choice";
             let brofAnswer=document.createElement('br');
             iofAnswer.className='answer';
             iofAnswer.textContent=question.answers[val];
