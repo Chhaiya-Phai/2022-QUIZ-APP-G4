@@ -1,18 +1,15 @@
 function dataPlayer(){
-    // right aswers nb1 //
     let answerNb1 = document.getElementById('answerNb1');
-    // right aswers nb2 //
     let answerNb2 = document.getElementById('answerNb2');
-    // right aswers nb3//
     let answerNb3 = document.getElementById('answerNb3');
-    // right aswers nb4 //
     let answerNb4 = document.getElementById('answerNb4');
-    // right aswers nb5 //
     let answerNb5 = document.getElementById('answerNb5');
-    // right aswers nb6 //
     let answerNb6 = document.getElementById('answerNb6');
-    // score //
-    let score = document.getElementById('score'),
+    let answerNb7 = document.getElementById('answerNb7');
+    let answerNb8 = document.getElementById('answerNb8');
+    let answerNb9 = document.getElementById('answerNb9');
+    let answerNb10 = document.getElementById('answerNb10');
+    let score = document.getElementById('score');
     
     result = 0;
     if(answerNb1.checked){
@@ -46,17 +43,15 @@ function dataPlayer(){
         result += 10;
     }
     score.textContent = result;
-    let rightObject = [answerNb1, answerNb2, answerNb3, answerNb4, answerNb5, answerNb6];
+    let rightObject = [answerNb1, answerNb2, answerNb3, answerNb4, answerNb5, answerNb6, answerNb7, answerNb8, answerNb9, answerNb10];
     rightAnswer.push(rightObject);
     
 };
 
 /* ====== display quiz end ======== */
 // gobal variable // 
-
 let rightAnswer =[];
 
 //       main code  //
-
 let applyAnswer = document.getElementById("submit");
 applyAnswer.addEventListener("click", dataPlayer);
